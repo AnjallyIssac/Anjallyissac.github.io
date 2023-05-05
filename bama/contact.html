@@ -44,7 +44,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="contact-box">
-    
+
                         <form action="" id="submit-form">
                             <div class="form-group">
                                 <input type="text" class="form-control" id="name" placeholder="Name here"
@@ -88,52 +88,52 @@
                 </div>
             </div>
         </div>
-    
+
     </section>
     <footer class="footer-section">
         <div class="col-12 text-center">
             <p class="pt-4 font-weight-bold">Connect With Us</p>
-    
+
             <div class="container text-center">
                 <a href="https://www.facebook.com/groups/1126586694632564/?ref=share_group_link"><i
                         class="fa fa-facebook"></i></a>
-                <a href="mailto:anjalyissac@gmail.com"><i class="fa fa fa-envelope"></i></a>
+                <a href="mailto:bamabarrie@gmail.com"><i class="fa fa fa-envelope"></i></a>
                 <a href="https://www.instagram.com/bama_barrie/"><i class="fa fa-instagram"></i></a>
             </div>
             <div class="col-12 text-center">
                 <p>Copyright&copy;2023 Barrie Area Malayalee Association.All rights reserved.</p>
             </div>
-    
+
     </footer>
-    </body>
-    <script>
+</body>
+<script>
 
-        $("#submit-form").submit((e) => {
-            e.preventDefault()
-            var name = $("#name").val();
-            var email = $("#email").val();
-            var number = $("#number").val();
-            var message = $("#message").val();
-            if (name == '' || email == '' || number == '' || message == '') {
-                swal({
-                    title: "Field Empty",
-                    text: "Please check the missing fields!",
-                    icon: "warning",
-                    button: "OK",
-                });
-            } else {
-                $.ajax({
-                    url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfbFdr2wHGE3EmFSC7xQXXMidtkIWWWMsH4L4BlljarQgAHgA/formResponse",
-                    data: $("#submit-form").serialize(),
-                    method: "post"
-                })
-                swal("Thank you!", "Your response has been recorded!", "success");
+    $("#submit-form").submit((e) => {
+        e.preventDefault()
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var number = $("#number").val();
+        var message = $("#message").val();
+        if (name == '' || email == '' || number == '' || message == '') {
+            swal({
+                title: "Field Empty",
+                text: "Please check the missing fields!",
+                icon: "warning",
+                button: "OK",
+            });
+        } else {
+            $.ajax({
+                url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfbFdr2wHGE3EmFSC7xQXXMidtkIWWWMsH4L4BlljarQgAHgA/formResponse",
+                data: $("#submit-form").serialize(),
+                method: "post"
+            })
+            swal("Thank you!", "Your response has been recorded!", "success");
 
-                document.getElementById("submit-form").reset();
+            document.getElementById("submit-form").reset();
 
 
-            }
-        })
-    </script>
-    
-    </html>
+        }
+    })
+</script>
+
+</html>
